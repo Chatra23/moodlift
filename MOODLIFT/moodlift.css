@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7f5;
+  margin: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  color: #3f7f6b;
+  font-size: 36px;
+}
+
+.header p {
+  color: #777;
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mood */
+.moods {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mood {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f0f2ef;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mood:hover {
+  background: #dff3ea;
+  transform: scale(1.05);
+}
+
+/* Tabs */
+.tabs button {
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #4f8a73;
+  color: white;
+}
+
+/* Buttons */
+.main-btn {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #4f8a73;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main-btn:hover {
+  transform: scale(1.05);
+}
+
+.secondary-btn {
+  background: #f3d7c6;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Breathing */
+.circle {
+  width: 120px;
+  height: 120px;
+  background: #cfe7dd;
+  border-radius: 50%;
+  margin: 20px auto;
+  transition: transform 4s ease-in-out;
+}
+
+#breathText {
+  font-weight: 600;
+  color: #4f8a73;
+}
+
+/* Input */
+.input-group {
+  display: flex;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.input-group button {
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  background: #4f8a73;
+  color: white;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .moods {
+    flex-direction: column;
+  }
+}

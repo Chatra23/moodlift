@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MoodLift | Emotional Wellness Space</title>
+    <link rel="stylesheet" href="moodlife.css">
+</head>
+<body>
+
+<div class="app-container">
+    
+    <!-- Header -->
+    <div class="hero">
+        <h1>🌿 MoodLift</h1>
+        <div class="tagline">Your space for calm, positivity, and a little smile 😊</div>
+    </div>
+
+    <!-- Mood Section -->
+    <div class="card">
+        <h2>📊 How are you feeling?</h2>
+        <div class="mood-grid">
+            <button class="mood-btn" data-mood="happy">😊 Happy</button>
+            <button class="mood-btn" data-mood="okay">😐 Okay</button>
+            <button class="mood-btn" data-mood="low">😔 Low</button>
+        </div>
+        <div id="response"></div>
+    </div>
+
+    <!-- Control Row: Dark Mode + Music -->
+    <div class="control-group">
+        <button class="icon-btn" id="darkModeToggle">🌙 Dark Mode</button>
+        <button class="icon-btn" id="musicToggle">🎵 Play Music</button>
+    </div>
+
+    <!-- Mood History -->
+    <div class="card">
+        <h2>📈 Your Mood History</h2>
+        <ul id="historyList" class="history-list">
+            <li style="opacity:0.7;">No entries yet — tap a mood ✨</li>
+        </ul>
+    </div>
+
+    <!-- Positive Messages Tabs -->
+    <div class="card">
+        <h2>✨ Positive Vibes</h2>
+        <div class="tab-bar">
+            <button class="tab-btn active" data-tab="quotes">💬 Quotes</button>
+            <button class="tab-btn" data-tab="selfcare">🌿 Self-Care</button>
+            <button class="tab-btn" data-tab="affirm">🪞 Affirmations</button>
+        </div>
+        <div id="messageContent">
+            “You are stronger than you think.”
+        </div>
+    </div>
+
+    <!-- Breathing Exercise (Enhanced) -->
+    <div class="card breathing-preview">
+        <h2>🧘 Breathing Exercise</h2>
+        <p style="margin-bottom: 12px;">A simple breathing technique to calm your mind</p>
+        <button class="icon-btn" id="startBreathingBtn" style="background:#9b6bff; color:white;">🌬️ Start Breathing</button>
+        <div id="breathingStatus" style="margin-top: 12px; font-size:0.9rem; font-weight:500;"></div>
+    </div>
+
+    <!-- Smile Booster Section (Jokes + Fun Facts) -->
+    <div class="card">
+        <h2>😄 Smile Booster</h2>
+        <div class="tab-bar" style="margin-bottom: 12px;">
+            <button class="smile-btn active" data-smile="joke">😂 Joke</button>
+            <button class="smile-btn" data-smile="fact">✨ Fun Fact</button>
+        </div>
+        <div id="smileContent" style="background:rgba(255,235,255,0.5); border-radius: 24px; padding: 16px; text-align:center; font-weight:500;">
+            Click for a laugh or surprise!
+        </div>
+        <button class="icon-btn" id="tellMeBtn" style="margin-top: 14px; width:100%;">🎲 Tell me something fun</button>
+    </div>
+
+    <!-- Gratitude Journal -->
+    <div class="card">
+        <h2>📔 Gratitude Journal</h2>
+        <p style="font-size:0.85rem; margin-bottom: 10px;">Write one good thing about today</p>
+        <input type="text" id="gratitudeInput" placeholder="I'm grateful for...">
+        <button class="icon-btn" id="saveGratitudeBtn" style="margin-top: 10px; background:#a37eff; color:white;">✨ Save entry</button>
+        <div id="gratitudeList" style="margin-top: 16px; font-size:0.85rem; max-height: 130px; overflow-y: auto; text-align:left;">
+            <em>No notes yet — start with one small thing</em>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="card">
+        <h2>🤖 Chat with MoodBot</h2>
+        <div class="chat-area">
+            <div class="chat-input-group">
+                <input type="text" id="userInput" placeholder="Type something... e.g., 'I feel sad' or 'hello'">
+                <button class="chat-send" id="sendChatBtn">Send</button>
+            </div>
+            <div id="chatResponse">
+                💬 Hi! I'm MoodBot. How are you feeling today?
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Disclaimer -->
+    <div class="footer-note">
+        ⚠️ This platform is not a medical tool. For professional help, please consult a mental health expert.<br>
+        MoodLift — Designed to provide emotional support, relaxation, and positivity.
+    </div>
+</div>
+
+<!-- Background Music (hidden autoplay disabled) -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script src="moodlife.js"></script>
+</body>
+</html>
